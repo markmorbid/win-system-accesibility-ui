@@ -1,0 +1,37 @@
+/* Edit these values, rebuild, and reopen the widget. Loaded after app.css. */
+:root {
+  /* Toolskin color tokens */
+  --ts-accent-h: 18;
+  --ts-accent-s: 100%;
+  --ts-accent-l: 52%;
+  --ts-bg-body: #0c0d0f;
+  --ts-bg-0: #111214;
+  --ts-bg-1: #17181b;
+  --ts-bg-2: #1f2024;
+  --ts-bg-3: #28292e;
+  --ts-bg-4: #323439;
+  --ts-border-1: #2a2c30;
+  --ts-border-2: #393c42;
+  --ts-border-3: #484c52;
+  --ts-text: #f0f0ed;
+  --ts-text-secondary: #c6cbce;
+  --ts-text-muted: #aeb4b9;
+  --ts-on-accent: #15110f;
+
+  /* Base units. The widget scale slider multiplies both. */
+  --ts-fs-base: 15px;
+  --ts-sp-base: 4px;
+  --ts-font-scale: var(--ui-scale);
+  --ts-sp-density: var(--ui-scale);
+
+  /* Widget shape tokens. Change the base values here or use Widget settings. */
+  --widget-panel-radius-base: 14px;
+  --widget-button-radius-base: 8px;
+  --widget-inner-radius-base: 4px;
+  --widget-select-radius-base: 6px;
+  --widget-panel-radius: calc(var(--widget-panel-radius-base) * var(--ui-scale));
+  --widget-button-radius: calc(var(--widget-button-radius-base) * var(--ui-scale));
+  --widget-inner-radius: calc(var(--widget-inner-radius-base) * var(--ui-scale));
+  --widget-select-radius: calc(var(--widget-select-radius-base) * var(--ui-scale));
+  --widget-panel-border: var(--ts-border-2);
+}

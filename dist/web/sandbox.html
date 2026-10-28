@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Toolskin integration sandbox</title>
+  <link rel="stylesheet" href="toolskin-core.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="scale.css">
+  <link rel="stylesheet" href="theme.css">
+  <script src="toolskin-enhance.js" defer></script>
+  <script src="sandbox.js" defer></script>
+</head>
+<body>
+  <main class="app-shell" style="height:auto;max-width:560px;margin:24px auto">
+    <header class="app-header" data-ts-ui-draggable><div class="heading"><h1>Toolskin sandbox</h1><p>Standalone behavior checks</p></div></header>
+    <div class="scroll-region">
+      <details class="ts-card module ts-ui-accordion" data-ts-accordion-group="modules" id="sandbox-first" open><summary>Display</summary><div class="module-body"><label for="sandbox-select">Device</label><select class="ts-ui-select" id="sandbox-select"><option value="a">Speakers</option><option value="b">Headphones</option></select></div></details>
+      <details class="ts-card module ts-ui-accordion" data-ts-accordion-group="modules" id="sandbox-second"><summary>Sound</summary><div class="module-body">Second module</div></details>
+      <output id="sandbox-result" role="status" aria-live="polite">Running checks…</output>
+    </div>
+  </main>
+</body>
+</html>

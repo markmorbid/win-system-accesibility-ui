@@ -1,0 +1,110 @@
+/* Toolskin-style scale engine. Root tokens inherit; component tokens are scoped. */
+:root {
+  --ui-scale: 1;
+  --ts-font-scale: var(--ui-scale);
+  --ts-fs-base: 15px;
+  --ts-fs: calc(var(--ts-fs-base) * var(--ts-font-scale));
+  --ts-fs-xs: calc(var(--ts-fs) * .733);
+  --ts-fs-sm: calc(var(--ts-fs) * .8);
+  --ts-fs-md: calc(var(--ts-fs) * .867);
+  --ts-fs-lg: calc(var(--ts-fs) * 1.067);
+  --ts-fs-title: calc(var(--ts-fs) * 1.4);
+  --ts-fs-value: calc(var(--ts-fs) * 1.467);
+  --ts-sp-base: 4px;
+  --ts-sp-density: var(--ui-scale);
+  --ts-sp-unit: calc(var(--ts-sp-base) * var(--ts-sp-density));
+  --ts-sp-1: var(--ts-sp-unit);
+  --ts-sp-2: calc(var(--ts-sp-unit) * 2);
+  --ts-sp-3: calc(var(--ts-sp-unit) * 3);
+  --ts-sp-4: calc(var(--ts-sp-unit) * 4);
+  --ts-sp-5: calc(var(--ts-sp-unit) * 5);
+  --ts-sp-6: calc(var(--ts-sp-unit) * 6);
+  --ts-control-h: calc(var(--ts-sp-unit) * 9.5);
+  --ts-control-pad-x: var(--ts-sp-3);
+  --ts-icon-size: calc(var(--ts-sp-unit) * 4.75);
+}
+
+html, body { font-size: var(--ts-fs); }
+svg { width: var(--ts-icon-size); height: var(--ts-icon-size); }
+
+:where(.app-shell) .app-header {
+  --ts-this-pad-x: var(--ts-sp-5);
+  --ts-this-pad-y: calc(var(--ts-sp-unit) * 4.25);
+  --ts-this-gap: calc(var(--ts-sp-unit) * 3.75);
+  min-height: calc(var(--ts-sp-unit) * 21.5);
+  padding: var(--ts-this-pad-y) var(--ts-this-pad-x);
+  gap: var(--ts-this-gap);
+}
+:where(.app-shell) .brand-mark { width: calc(var(--ts-sp-unit) * 9); height: calc(var(--ts-sp-unit) * 9); gap: calc(var(--ts-sp-unit) * .75); }
+:where(.app-shell) .brand-mark span { width: calc(var(--ts-sp-unit) * .75); }
+:where(.app-shell) .brand-mark span:nth-child(1) { height: calc(var(--ts-sp-unit) * 2.75); }
+:where(.app-shell) .brand-mark span:nth-child(2) { height: calc(var(--ts-sp-unit) * 4.75); }
+:where(.app-shell) .brand-mark span:nth-child(3) { height: calc(var(--ts-sp-unit) * 3.5); }
+:where(.app-shell) .heading h1 { font-size: var(--ts-fs-title); }
+:where(.app-shell) .heading p { margin-top: var(--ts-sp-1); font-size: var(--ts-fs-sm); }
+:where(.app-shell) .header-actions { gap: calc(var(--ts-sp-unit) * 1.25); }
+:where(.app-shell) .icon-button { width: var(--ts-control-h); height: var(--ts-control-h); }
+
+:where(.app-shell) .scroll-region { padding: calc(var(--ts-sp-unit) * 3.75) calc(var(--ts-sp-unit) * 4.5) calc(var(--ts-sp-unit) * 4.5); }
+:where(.app-shell) .screen-line { gap: var(--ts-sp-2); margin: 0 calc(var(--ts-sp-unit) * .75) calc(var(--ts-sp-unit) * 3.25); min-height: calc(var(--ts-sp-unit) * 7); font-size: var(--ts-fs-sm); }
+:where(.app-shell) :is(.signal, .status-dot) { width: calc(var(--ts-sp-unit) * 1.75); height: calc(var(--ts-sp-unit) * 1.75); }
+:where(.app-shell) .text-action { padding: calc(var(--ts-sp-unit) * 1.25) calc(var(--ts-sp-unit) * .5); font-size: var(--ts-fs-sm); }
+:where(.app-shell) .module { margin-bottom: var(--ts-sp-3) !important; }
+:where(.app-shell) .module > summary {
+  --ts-this-pad-x: calc(var(--ts-sp-unit) * 4.25);
+  --ts-this-pad-y: calc(var(--ts-sp-unit) * 3.75);
+  gap: calc(var(--ts-sp-unit) * 2.5);
+  padding: var(--ts-this-pad-y) var(--ts-this-pad-x);
+  min-height: calc(var(--ts-sp-unit) * 14.25);
+}
+:where(.app-shell) .module > summary svg { width: calc(var(--ts-sp-unit) * 4.25); height: calc(var(--ts-sp-unit) * 4.25); }
+:where(.app-shell) .module-title { font-size: var(--ts-fs-lg); }
+:where(.app-shell) .module-note { font-size: var(--ts-fs-sm); }
+:where(.app-shell) .module-body { padding: calc(var(--ts-sp-unit) * .25) calc(var(--ts-sp-unit) * 4.25) calc(var(--ts-sp-unit) * 4.25); }
+:where(.app-shell) .scale-row { gap: var(--ts-sp-3); margin: calc(var(--ts-sp-unit) * 4.25) 0 calc(var(--ts-sp-unit) * 1.25); }
+:where(.app-shell) .scale-row strong { font-size: var(--ts-fs-value); margin-top: 0; }
+:where(.app-shell) .field-label { font-size: var(--ts-fs-md); margin-bottom: var(--ts-sp-2); }
+:where(.app-shell) .help { font-size: var(--ts-fs-sm); margin-top: calc(var(--ts-sp-unit) * 1.75); }
+:where(.app-shell) .divider { margin: calc(var(--ts-sp-unit) * 4.25) 0; }
+
+:where(.app-shell) :is(.quiet-button, .accent-button) {
+  --ts-this-pad-x: var(--ts-sp-3);
+  --ts-this-pad-y: var(--ts-sp-2);
+  min-height: calc(var(--ts-sp-unit) * 9);
+  padding: var(--ts-this-pad-y) var(--ts-this-pad-x);
+  font-size: var(--ts-fs-md);
+}
+:where(.app-shell) .resolution-row { gap: var(--ts-sp-2); }
+:where(.app-shell) .resolution-row button { min-width: calc(var(--ts-sp-unit) * 18); }
+:where(.app-shell) select {
+  height: var(--ts-control-h);
+  padding: 0 calc(var(--ts-sp-unit) * 9) 0 var(--ts-control-pad-x);
+  background-position: right var(--ts-sp-3) center;
+  background-size: calc(var(--ts-sp-unit) * 4) auto;
+}
+:where(.app-shell) .field-top { margin-top: calc(var(--ts-sp-unit) * 3.75); }
+:where(.app-shell) input[type=range] { height: calc(var(--ts-sp-unit) * 8); margin: calc(var(--ts-sp-unit) * 1.25) 0 calc(var(--ts-sp-unit) * .75); }
+:where(.app-shell) .check-row { gap: calc(var(--ts-sp-unit) * 2.5); min-height: var(--ts-control-h); font-size: var(--ts-fs-md); }
+:where(.app-shell) .gap { margin-top: calc(var(--ts-sp-unit) * 4.25); }
+:where(.app-shell) .module-body .quiet-button.full { margin-top: calc(var(--ts-sp-unit) * 3.5); }
+:where(.app-shell) .status-bar { min-height: calc(var(--ts-sp-unit) * 12); gap: calc(var(--ts-sp-unit) * 2.25); padding: calc(var(--ts-sp-unit) * 2.5) var(--ts-sp-5); font-size: var(--ts-fs-sm); }
+:where(.app-shell) .status-bar .shortcut { font-size: var(--ts-fs-xs); }
+:where(.app-shell) .settings-head { gap: calc(var(--ts-sp-unit) * 3.75); padding: var(--ts-sp-4) var(--ts-sp-5) var(--ts-sp-2); }
+:where(.app-shell) .settings-head h2 { font-size: calc(var(--ts-fs) * 1.333); }
+:where(.app-shell) .settings-scroll { padding: var(--ts-sp-2) var(--ts-sp-5) var(--ts-sp-5); }
+:where(.app-shell) .settings-scroll .field-label { margin-bottom: calc(var(--ts-sp-unit) * 1.75); }
+:where(.app-shell) .settings-scroll .check-row { min-height: calc(var(--ts-sp-unit) * 10.5); }
+:where(.app-shell) .settings-scroll .divider { margin: var(--ts-sp-4) 0 calc(var(--ts-sp-unit) * 2.5); }
+:where(.app-shell) .settings-footer { padding: calc(var(--ts-sp-unit) * 3.25) var(--ts-sp-5); }
+:where(.app-shell) .device-current { min-height: calc(var(--ts-sp-unit) * 9.75); padding: var(--ts-sp-2) var(--ts-sp-3); font-size: var(--ts-fs-md); }
+.app-shell .check-row input[type=checkbox] { width: calc(var(--ts-sp-unit) * 4.5) !important; height: calc(var(--ts-sp-unit) * 4.5) !important; min-width: calc(var(--ts-sp-unit) * 4.5) !important; }
+.app-shell .check-row input[type=checkbox]:checked::after { left: calc(var(--ts-sp-unit) * 1.25); top: calc(var(--ts-sp-unit) * .25); width: calc(var(--ts-sp-unit) * 1.25); height: calc(var(--ts-sp-unit) * 2.5); }
+.app-shell input.ts-range-control { height: calc(var(--ts-sp-unit) * 8) !important; margin: var(--ts-sp-2) 0 var(--ts-sp-3) !important; background-size: 100% calc(var(--ts-sp-unit) * 2) !important; }
+.app-shell input.ts-range-control::-webkit-slider-thumb { width: calc(var(--ts-sp-unit) * 5); height: calc(var(--ts-sp-unit) * 5); }
+
+@media(max-width:420px) {
+  :where(.app-shell) .app-header { padding: calc(var(--ts-sp-unit) * 3.5) calc(var(--ts-sp-unit) * 3.75); gap: calc(var(--ts-sp-unit) * 2.75); }
+  :where(.app-shell) .scroll-region { padding: calc(var(--ts-sp-unit) * 3.25); }
+  :where(.app-shell) .module > summary { padding: calc(var(--ts-sp-unit) * 3.25); }
+  :where(.app-shell) .module-body { padding: calc(var(--ts-sp-unit) * .25) calc(var(--ts-sp-unit) * 3.25) calc(var(--ts-sp-unit) * 3.5); }
+}

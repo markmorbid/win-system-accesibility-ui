@@ -1,0 +1,20 @@
+/* Curated Toolskin tokens for this offline widget. Source: toolskin-rebuild/assets/css/toolskin.css. */
+:root {
+  --ts-accent-h: 18;
+  --ts-accent-s: 100%;
+  --ts-accent-l: 52%;
+  --ts-accent: hsl(var(--ts-accent-h), var(--ts-accent-s), var(--ts-accent-l));
+  --ts-accent-dim-2: color-mix(in srgb, var(--ts-accent), transparent 92%);
+  --ts-accent-border: color-mix(in srgb, var(--ts-accent), transparent 60%);
+  --ts-bg-body: #0c0d0f;
+  --ts-bg-0: #111214;
+  --ts-bg-1: #17181b;
+  --ts-bg-2: #1f2024;
+  --ts-bg-3: #28292e;
+  --ts-bg-4: #323439;
+  --ts-border-1: color-mix(in srgb, #fff, transparent 90%);
+  --ts-border-2: color-mix(in srgb, #fff, transparent 84%);
+  --ts-border-3: color-mix(in srgb, #fff, transparent 80%);
+  --ts-font-display: "Space Grotesk", system-ui, sans-serif;
+  --ts-font-body: "Space Grotesk", system-ui, sans-serif;
+}

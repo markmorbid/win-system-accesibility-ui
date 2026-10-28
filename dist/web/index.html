@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'">
+  <title>System controls</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="scale.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="toolskin-core.css">
+  <script src="toolskin-enhance.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="app-shell" id="app">
+    <header class="app-header ts-ui-draggable" data-ts-ui-draggable title="Drag from the title area to move the panel">
+      <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="heading"><h1>System controls</h1><p>Display and sound, within reach.</p></div>
+      <div class="header-actions">
+        <button class="icon-button" id="settings-open" type="button" aria-label="Open widget settings" aria-pressed="false" title="Widget settings"><span class="ts-icon ts-btn-icon ts-icon__svg-gear"></span></button>
+        <button class="icon-button" id="close" type="button" aria-label="Close panel" title="Close panel"><span class="ts-icon ts-btn-icon ts-icon__svg-xmark"></span></button>
+      </div>
+    </header>
+
+    <div class="view" id="controls-view">
+      <div class="scroll-region">
+        <div class="screen-line"><span class="signal" aria-hidden="true"></span><span id="monitor-name">Checking monitor…</span><button type="button" id="refresh" class="text-action">Refresh</button></div>
+
+        <details class="ts-card module ts-ui-accordion" data-ts-accordion-group="modules" id="display-section" open>
+          <summary><span class="module-title">Display</span><span class="module-note">Scale &amp; resolution</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="module-body">
+            <div class="scale-row"><div><span class="field-label">Current scale</span><strong id="scale-value">—</strong></div></div>
+            <div class="resolution-row" id="scale-control"><select class="ts-ui-select" id="scale-select" aria-label="Display scale"></select><button type="button" id="apply-scale" class="accent-button">Apply scale</button></div>
+            <button type="button" id="open-display" class="quiet-button" hidden>Change in Windows <span aria-hidden="true">↗</span></button>
+            <p class="help" id="scale-help">Scale changes revert after 15 seconds unless you keep them. Some apps may need to reopen.</p>
+            <div class="divider"></div>
+            <label class="field-label" for="resolution">Resolution</label>
+            <div class="resolution-row"><select class="ts-ui-select" id="resolution" aria-describedby="resolution-help"></select><button type="button" id="apply-resolution" class="accent-button">Apply</button></div>
+            <p class="help" id="resolution-help">Changes revert after 15 seconds unless you keep them.</p>
+          </div>
+        </details>
+
+        <details class="ts-card module ts-ui-accordion" data-ts-accordion-group="modules" id="sound-section">
+          <summary><span class="module-title">Sound</span><span class="module-note">Volume &amp; devices</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="module-body">
+            <div class="field-top"><label class="field-label" for="volume">Master volume</label><output id="volume-value" for="volume">—</output></div>
+            <input id="volume" class="ts-range-control" type="range" min="0" max="100" step="1" aria-label="Master output volume">
+            <label class="check-row"><input id="mute" type="checkbox"><span>Mute output</span></label>
+            <div class="divider"></div>
+            <span class="field-label">Output device</span>
+            <div id="output-current" class="device-current" role="status"></div>
+            <select class="ts-ui-select" id="output" aria-label="Choose output device" hidden></select>
+            <span class="field-label gap">Input device</span>
+            <div id="input-current" class="device-current" role="status"></div>
+            <select class="ts-ui-select" id="input" aria-label="Choose input device" hidden></select>
+            <p class="help" id="device-help">Choose a device, then finish the default-device change in Windows Sound.</p>
+            <details class="device-inventory"><summary>Detected audio devices</summary><div><strong>Output</strong><ul id="all-outputs"></ul><strong>Input</strong><ul id="all-inputs"></ul></div></details>
+            <button type="button" id="open-sound" class="quiet-button full">Open Windows Sound <span aria-hidden="true">↗</span></button>
+          </div>
+        </details>
+      </div>
+      <footer class="status-bar"><span class="status-dot" aria-hidden="true"></span><span id="status" role="status" aria-live="polite">Ready</span><span class="shortcut">Ctrl + Alt + Space</span></footer>
+    </div>
+
+    <section class="view settings-view" id="settings-view" hidden aria-labelledby="settings-heading">
+      <div class="settings-head"><button type="button" class="text-action" id="settings-back">← Back</button><h2 id="settings-heading">Widget settings</h2></div>
+      <div class="settings-scroll">
+        <label class="field-label gap" for="edge">Launcher edge</label><select class="ts-ui-select" id="edge"><option value="Left">Left</option><option value="Right">Right</option></select>
+        <label class="field-label gap" for="monitor">Monitor</label><select class="ts-ui-select" id="monitor"></select>
+        <label class="field-label gap" for="delay">Reveal delay <output id="delay-value" for="delay"></output></label><input id="delay" class="ts-range-control" type="range" min="150" max="1500" step="50">
+        <label class="field-label gap" for="ui-scale">Widget scale <output id="ui-scale-value" for="ui-scale">100%</output></label><input id="ui-scale" class="ts-range-control" type="range" min="60" max="130" step="5" value="100" aria-describedby="ui-scale-help">
+        <p class="help" id="ui-scale-help">Scales text, spacing, controls, and panel width. Release the slider to resize the window.</p>
+        <label class="field-label gap" for="design-preset">Design preset</label><select class="ts-ui-select" id="design-preset"><option value="custom">Custom</option><option value="compact">Compact</option><option value="balanced">Balanced</option><option value="airy">Airy</option></select>
+        <label class="field-label gap" for="font-base">Base text size <output id="font-base-value" for="font-base">15 px</output></label><input id="font-base" class="ts-range-control" type="range" min="12" max="18" step="1">
+        <label class="field-label gap" for="spacing-base">Spacing unit <output id="spacing-base-value" for="spacing-base">4 px</output></label><input id="spacing-base" class="ts-range-control" type="range" min="2" max="6" step="1">
+        <label class="field-label gap" for="panel-radius">Panel radius <output id="panel-radius-value" for="panel-radius">14 px</output></label><input id="panel-radius" class="ts-range-control" type="range" min="0" max="30" step="2">
+        <label class="field-label gap" for="button-radius">Button radius <output id="button-radius-value" for="button-radius">8 px</output></label><input id="button-radius" class="ts-range-control" type="range" min="0" max="18" step="2">
+        <label class="field-label gap" for="inner-radius">Inner radius <output id="inner-radius-value" for="inner-radius">4 px</output></label><input id="inner-radius" class="ts-range-control" type="range" min="0" max="18" step="1">
+        <label class="field-label gap" for="select-radius">Select radius <output id="select-radius-value" for="select-radius">6 px</output></label><input id="select-radius" class="ts-range-control" type="range" min="0" max="18" step="1">
+        <fieldset class="accent-field"><legend class="field-label">Accent color</legend><label><input type="radio" name="accent" value="orange"><span class="swatch-dot orange"></span>Orange</label><label><input type="radio" name="accent" value="cyan"><span class="swatch-dot cyan"></span>Cyan</label><label><input type="radio" name="accent" value="green"><span class="swatch-dot green"></span>Green</label><label><input type="radio" name="accent" value="violet"><span class="swatch-dot violet"></span>Violet</label></fieldset>
+        <div class="divider"></div>
+        <label class="check-row"><input id="show-display" type="checkbox"><span>Show display controls</span></label>
+        <label class="check-row"><input id="show-sound" type="checkbox"><span>Show sound controls</span></label>
+        <label class="check-row"><input id="topmost" type="checkbox"><span>Keep panel above windows</span></label>
+        <label class="check-row"><input id="startup" type="checkbox"><span>Start with Windows</span></label>
+        <p class="help">Widget scale affects only this panel. Change Windows display scale in Display controls.</p>
+      </div>
+      <div class="settings-footer"><button type="button" id="save-settings" class="accent-button full">Save settings</button></div>
+    </section>
+  </main>
+</body>
+</html>

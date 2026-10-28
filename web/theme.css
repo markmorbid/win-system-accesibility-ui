@@ -1,0 +1,93 @@
+/* Edit these values, rebuild, and reopen the widget. Loaded after app.css. */
+:root {
+  /* Toolskin color tokens */
+  --ts-accent-h: 18;
+  --ts-accent-s: 100%;
+  --ts-accent-l: 52%;
+  --ts-bg-body: #0c0d0f;
+  --ts-bg-0: #111214;
+  --ts-bg-1: #17181b;
+  --ts-bg-2: #1f2024;
+  --ts-bg-3: #28292e;
+  --ts-bg-4: #323439;
+  --ts-border-1: #2a2c30;
+  --ts-border-2: #393c42;
+  --ts-border-3: #484c52;
+  --ts-border-3: #484c52;
+  --ts-text: #f0f0ed;
+  --ts-text-secondary: #c6cbce;
+  --ts-text-muted: #aeb4b9;
+
+  --ts-bg-body: #0c0d0f;
+    --ts-bg-0: #111214;
+    --ts-bg-1: #17181b;
+    --ts-bg-2: #1f2024;
+    --ts-bg-3: #28292e;
+    --ts-bg-4: #323439;
+    --ts-bg-overlay: color-mix(in srgb, var(--ts-bg-body), transparent 8%);
+    --ts-orange: #ff540a;
+    --ts-blue: #007bff;
+    --ts-green: #28a745;
+    --ts-red: #dc3545;
+    --ts-yellow: #ffc107;
+    --ts-purple: #6f42c1;
+    --ts-pink: #e83e8c;
+    --ts-gray: #6c757d;
+    --ts-yellow-dim: color-mix(in srgb, var(--ts-yellow), transparent 82%);
+    --ts-orange-dim: color-mix(in srgb, var(--ts-orange), transparent 82%);
+    --ts-blue-dim: color-mix(in srgb, var(--ts-blue), transparent 82%);
+    --ts-green-dim: color-mix(in srgb, var(--ts-green), transparent 82%);
+    --ts-purple-dim: color-mix(in srgb, var(--ts-purple), transparent 82%);
+    --ts-red-dim: color-mix(in srgb, var(--ts-red), transparent 82%);
+    --ts-pink-dim: color-mix(in srgb, var(--ts-pink), transparent 82%);
+    --ts-gray-dim: color-mix(in srgb, var(--ts-gray), transparent 82%);
+    --ts-yellow-border: color-mix(in srgb, var(--ts-yellow), transparent 60%);
+    --ts-orange-border: color-mix(in srgb, var(--ts-orange), transparent 60%);
+    --ts-blue-border: color-mix(in srgb, var(--ts-blue), transparent 60%);
+    --ts-green-border: color-mix(in srgb, var(--ts-green), transparent 60%);
+    --ts-purple-border: color-mix(in srgb, var(--ts-purple), transparent 60%);
+    --ts-red-border: color-mix(in srgb, var(--ts-red), transparent 60%);
+    --ts-pink-border: color-mix(in srgb, var(--ts-pink), transparent 60%);
+    --ts-gray-border: color-mix(in srgb, var(--ts-gray), transparent 60%);
+    --ts-success: hsl(142, 76%, 36%);
+    --ts-success-dim: color-mix(in srgb, var(--ts-success), transparent 82%);
+    --ts-warning: hsl(45, 100%, 50%);
+    --ts-warning-dim: color-mix(in srgb, var(--ts-warning), transparent 82%);
+    --ts-danger: hsl(0, 90%, 55%);
+    --ts-danger-dim: color-mix(in srgb, var(--ts-danger), transparent 82%);
+    --ts-info: hsl(210, 90%, 55%);
+    --ts-info-dim: color-mix(in srgb, var(--ts-info), transparent 82%);
+    --ts-text-primary: #e8e9ea;
+    --ts-text-secondary: #9ea0a5;
+    --ts-text-muted: #6d6f74;
+    --ts-text-accent: var(--ts-accent);
+    --ts-text-invert: #000000;
+    --ts-bg-0-t: color-mix(in srgb, var(--ts-bg-0), transparent 30%);
+    --ts-bg-1-t: color-mix(in srgb, var(--ts-bg-1), transparent 30%);
+    --ts-bg-2-t: color-mix(in srgb, var(--ts-bg-2), transparent 40%);
+    --ts-bg-3-t: color-mix(in srgb, var(--ts-bg-3), transparent 40%);
+    --ts-bg-4-t: color-mix(in srgb, var(--ts-bg-4), transparent 40%);
+    --ts-border-1: color-mix(in srgb, #fff, transparent 90%);
+    --ts-border-2: color-mix(in srgb, #fff, transparent 84%);
+    --ts-border-3: color-mix(in srgb, #fff, transparent 80%);
+    --ts-border-4: color-mix(in srgb, #fff, transparent 70%);
+  /* dont kill these values. the tokens on core hs priority as they are fully dynamic. this sheet should hold parameters instead of core features */
+
+
+  /* Base units. The widget scale slider multiplies both. */
+  --ts-fs-base: 15px;
+  --ts-sp-base: 4px;
+  --ts-font-scale: var(--ui-scale);
+  --ts-sp-density: var(--ui-scale);
+
+  /* Widget shape tokens. Change the base values here or use Widget settings. */
+  --widget-panel-radius-base: 14px;
+  --widget-button-radius-base: 8px;
+  --widget-inner-radius-base: 4px;
+  --widget-select-radius-base: 6px;
+  --widget-panel-radius: calc(var(--widget-panel-radius-base) * var(--ui-scale));
+  --widget-button-radius: calc(var(--widget-button-radius-base) * var(--ui-scale));
+  --widget-inner-radius: calc(var(--widget-inner-radius-base) * var(--ui-scale));
+  --widget-select-radius: calc(var(--widget-select-radius-base) * var(--ui-scale));
+  --widget-panel-border: var(--ts-border-2);
+}

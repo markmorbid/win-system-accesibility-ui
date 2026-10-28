@@ -1,0 +1,11 @@
+{
+  "header": {
+    "title": "System controls",
+    "subtitle": "Display and sound, within reach.",
+    "items": ["brand", "heading", "actions"],
+    "actions": ["settings", "close"]
+  },
+  "modules": ["display", "sound"],
+  "showRefresh": true,
+  "showShortcut": true
+}

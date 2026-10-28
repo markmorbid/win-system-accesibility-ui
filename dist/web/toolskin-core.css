@@ -1,0 +1,721 @@
+/* Curated Toolskin tokens for this offline widget. Source: toolskin-rebuild/assets/css/toolskin.css. */
+:root {
+    --ts-accent-h: 18;
+    --ts-accent-s: 100%;
+    --ts-accent-l: 52%;
+    --ts-accent: hsl(var(--ts-accent-h), var(--ts-accent-s), var(--ts-accent-l));
+    --ts-accent-dim-0: color-mix(in srgb, var(--ts-accent), transparent 60%);
+    --ts-accent-dim: color-mix(in srgb, var(--ts-accent), transparent 82%);
+    --ts-accent-dim-2: color-mix(in srgb, var(--ts-accent), transparent 92%);
+    --ts-accent-dim-3: color-mix(in srgb, var(--ts-accent), transparent 90%);
+    --ts-accent-dim-1: color-mix(in srgb, var(--ts-accent), transparent 50%);
+    --ts-accent-dim-4: color-mix(in srgb, var(--ts-accent), transparent 70%);
+    --ts-accent-dim-5: color-mix(in srgb, var(--ts-accent), transparent 88%);
+    --ts-accent-dim-6: color-mix(in srgb, var(--ts-accent), transparent 95%);
+    --ts-accent-border: color-mix(in srgb, var(--ts-accent), transparent 60%);
+    --ts-bg-body: #0c0d0f;
+    --ts-bg-0: #111214;
+    --ts-bg-1: #17181b;
+    --ts-bg-2: #1f2024;
+    --ts-bg-3: #28292e;
+    --ts-bg-4: #323439;
+    --ts-bg-overlay: color-mix(in srgb, var(--ts-bg-body), transparent 8%);
+    --ts-orange: #ff540a;
+    --ts-blue: #007bff;
+    --ts-green: #28a745;
+    --ts-red: #dc3545;
+    --ts-yellow: #ffc107;
+    --ts-purple: #6f42c1;
+    --ts-pink: #e83e8c;
+    --ts-gray: #6c757d;
+    --ts-yellow-dim: color-mix(in srgb, var(--ts-yellow), transparent 82%);
+    --ts-orange-dim: color-mix(in srgb, var(--ts-orange), transparent 82%);
+    --ts-blue-dim: color-mix(in srgb, var(--ts-blue), transparent 82%);
+    --ts-green-dim: color-mix(in srgb, var(--ts-green), transparent 82%);
+    --ts-purple-dim: color-mix(in srgb, var(--ts-purple), transparent 82%);
+    --ts-red-dim: color-mix(in srgb, var(--ts-red), transparent 82%);
+    --ts-pink-dim: color-mix(in srgb, var(--ts-pink), transparent 82%);
+    --ts-gray-dim: color-mix(in srgb, var(--ts-gray), transparent 82%);
+    --ts-yellow-border: color-mix(in srgb, var(--ts-yellow), transparent 60%);
+    --ts-orange-border: color-mix(in srgb, var(--ts-orange), transparent 60%);
+    --ts-blue-border: color-mix(in srgb, var(--ts-blue), transparent 60%);
+    --ts-green-border: color-mix(in srgb, var(--ts-green), transparent 60%);
+    --ts-purple-border: color-mix(in srgb, var(--ts-purple), transparent 60%);
+    --ts-red-border: color-mix(in srgb, var(--ts-red), transparent 60%);
+    --ts-pink-border: color-mix(in srgb, var(--ts-pink), transparent 60%);
+    --ts-gray-border: color-mix(in srgb, var(--ts-gray), transparent 60%);
+    --ts-success: hsl(142, 76%, 36%);
+    --ts-success-dim: color-mix(in srgb, var(--ts-success), transparent 82%);
+    --ts-warning: hsl(45, 100%, 50%);
+    --ts-warning-dim: color-mix(in srgb, var(--ts-warning), transparent 82%);
+    --ts-danger: hsl(0, 90%, 55%);
+    --ts-danger-dim: color-mix(in srgb, var(--ts-danger), transparent 82%);
+    --ts-info: hsl(210, 90%, 55%);
+    --ts-info-dim: color-mix(in srgb, var(--ts-info), transparent 82%);
+    --ts-text-primary: #e8e9ea;
+    --ts-text-secondary: #9ea0a5;
+    --ts-text-muted: #6d6f74;
+    --ts-text-accent: var(--ts-accent);
+    --ts-text-invert: #000000;
+    --ts-bg-0-t: color-mix(in srgb, var(--ts-bg-0), transparent 30%);
+    --ts-bg-1-t: color-mix(in srgb, var(--ts-bg-1), transparent 30%);
+    --ts-bg-2-t: color-mix(in srgb, var(--ts-bg-2), transparent 40%);
+    --ts-bg-3-t: color-mix(in srgb, var(--ts-bg-3), transparent 40%);
+    --ts-bg-4-t: color-mix(in srgb, var(--ts-bg-4), transparent 40%);
+    --ts-border-1: color-mix(in srgb, #fff, transparent 90%);
+    --ts-border-2: color-mix(in srgb, #fff, transparent 84%);
+    --ts-border-3: color-mix(in srgb, #fff, transparent 80%);
+    --ts-font-display: "Space Grotesk", system-ui, sans-serif;
+    --ts-font-body: "Space Grotesk", system-ui, sans-serif;
+    --ts-fontawesome-family: "Font Awesome 5 Regular";
+    /* font size tokens */
+    --ts-fs: calc(var(--ts-fs-base) * var(--ts-font-scale));
+    --ts-icon-size: calc(1em * var(--ts-fs-icon-ratio));
+
+    --ts-fs-base: 12px;
+    --ts-font-scale: 1;
+    --ts-fs-ratio: 1.12;
+    --ts-fs-icon-ratio: 1.2;
+    --ts-fs-display-ratio: 1.333;
+    --ts-fs-base-val: var(--ts-fs-base);
+    --ts-fs-4xs: calc(var(--ts-fs) * 0.625);
+    --ts-fs-3xs: calc(var(--ts-fs) * 0.703);
+    --ts-fs-2xs: calc(var(--ts-fs) * 0.79);
+    --ts-fs-xs: calc(var(--ts-fs) * 0.889);
+    --ts-fs-sm: calc(var(--ts-fs) * 0.93);
+    --ts-fs-md: var(--ts-fs);
+    --ts-fs-lg: calc(var(--ts-fs) * 1.1);
+    --ts-fs-xlg: calc(var(--ts-fs) * 1.266);
+    --ts-fs-xl: calc(var(--ts-fs) * 1.4);
+    --ts-fs-2xl: calc(var(--ts-fs) * 1.602);
+    --ts-fs-3xl: calc(var(--ts-fs) * 1.802);
+    --ts-fs-4xl: calc(var(--ts-fs) * 2.027);
+    --ts-fs-h6: var(--ts-fs-md);
+    --ts-fs-h5: var(--ts-fs-lg);
+    --ts-fs-h4: var(--ts-fs-xl);
+    --ts-fs-h3: clamp(var(--ts-fs-2xl), 2.5vw, var(--ts-fs-3xl));
+    --ts-fs-h2: clamp(var(--ts-fs-3xl), 3.5vw, calc(var(--ts-fs) * 2.566));
+    --ts-fs-h1: clamp(var(--ts-fs-4xl), 5vw, calc(var(--ts-fs) * 3.247));
+    --ts-fs-display-md: clamp(calc(var(--ts-fs) * 3.247), 6vw, calc(var(--ts-fs) * 4.328));
+    --ts-fs-display-lg: clamp(calc(var(--ts-fs) * 4.328), 8vw, calc(var(--ts-fs) * 5.769));
+    --ts-fs-display-xl: clamp(calc(var(--ts-fs) * 5.769), 10vw, calc(var(--ts-fs) * 7.690));
+    --ts-fs-body: var(--ts-fs-md);
+    --ts-fs-body-sm: var(--ts-fs-sm);
+    --ts-fs-caption: var(--ts-fs-2xs);
+    --ts-fs-small: var(--ts-fs-3xs);
+    --ts-fs-lead: var(--ts-fs-md);
+    --ts-fs-hero: clamp(calc(var(--ts-fs) * 3.5), 12vw, calc(var(--ts-fs) * 10));
+    --ts-fs-display: var(--ts-fs-display-md);
+    --ts-fs-section-title: var(--ts-fs-h2);
+    --ts-fs-pricing: var(--ts-fs-display-md);
+    --ts-fs-eyebrow: 9px;
+    /* spacing engine tokens */
+    --ts-sp-base: 4px;
+    /* atomic unit */
+    --ts-sp-density: 1;
+    /* component-tier multiplier (UI roominess) */
+    --ts-sp-rhythm: 1;
+    /* layout-tier multiplier (page breathing) */
+    --ts-sp-ratio: 1.25;
+    /* geometric ratio â€” try 1.2 (minor 3rd) or 1.333 (perfect 4th) */
+    /* â€”â€” Derived primitives (don't touch) â€”â€” */
+    --ts-sp: var(--ts-sp-base);
+    /* alias: the base */
+    --ts-sp-unit: calc(var(--ts-sp-base) * var(--ts-sp-density));
+    /* component grid */
+    /* â€”â€” MICRO TIER: 1â€“4 â€” fixed, crisp, never rescales â€”â€” */
+    --ts-sp-0: 0px;
+    --ts-sp-px: 1px;
+    /* hairline */
+    --ts-sp-1: var(--ts-sp-unit);
+    /*  4px */
+    --ts-sp-2: calc(var(--ts-sp-unit) * 2);
+    /*  8px */
+    --ts-sp-3: calc(var(--ts-sp-unit) * 3);
+    /* 12px */
+    --ts-sp-4: calc(var(--ts-sp-unit) * 4);
+    /* 16px */
+    /* â€”â€” COMPONENT TIER: 5â€“9 â€” linear Ã— density â€”â€” */
+    --ts-sp-5: calc(var(--ts-sp-unit) * 5);
+    /* 20px @ density 1 */
+    --ts-sp-6: calc(var(--ts-sp-unit) * 6);
+    /* 24px */
+    --ts-sp-7: calc(var(--ts-sp-unit) * 7);
+    /* 28px */
+    --ts-sp-8: calc(var(--ts-sp-unit) * 8);
+    /* 32px */
+    --ts-sp-9: calc(var(--ts-sp-unit) * 9);
+    /* 36px â€” restored linear scale (was unit*10 = 40px, off-by-one) */
+    /* â€”â€” LAYOUT TIER: 10+ â€” geometric Ã— rhythm â€”â€” */
+    /* Anchor at 48px (= sp-base Ã— 12), then Ã—ratio each step.
+   At ratio 1.25:  48 â†’ 60 â†’ 75 â†’ 94 â†’ 117 â†’ 146 â†’ 183 â†’ 229 */
+    --ts-sp-10: calc(var(--ts-sp-unit) * 12 * var(--ts-sp-rhythm));
+    /*  48px */
+    --ts-sp-11: calc(var(--ts-sp-unit) * 12 * var(--ts-sp-rhythm) * var(--ts-sp-ratio));
+    /*  60px */
+    --ts-sp-12: calc(var(--ts-sp-unit) * 12 * var(--ts-sp-rhythm) * var(--ts-sp-ratio) * var(--ts-sp-ratio));
+    /*  75px */
+    --ts-sp-13: calc(var(--ts-sp-unit) * 12 * var(--ts-sp-rhythm) * var(--ts-sp-ratio) * var(--ts-sp-ratio) * var(--ts-sp-ratio));
+    /*  94px */
+    --ts-sp-14: calc(var(--ts-sp-unit) * 12 * var(--ts-sp-rhythm) * var(--ts-sp-ratio) * var(--ts-sp-ratio) * var(--ts-sp-ratio) * var(--ts-sp-ratio));
+    /* 117px */
+    --ts-sp-15: calc(var(--ts-sp-unit) * 12 * var(--ts-sp-rhythm) * var(--ts-sp-ratio) * var(--ts-sp-ratio) * var(--ts-sp-ratio) * var(--ts-sp-ratio) * var(--ts-sp-ratio));
+    /* 146px */
+    --ts-sp-16: calc(var(--ts-sp-unit) * 12 * var(--ts-sp-rhythm) * var(--ts-sp-ratio) * var(--ts-sp-ratio) * var(--ts-sp-ratio) * var(--ts-sp-ratio) * var(--ts-sp-ratio) * var(--ts-sp-ratio));
+    /* 183px */
+    --ts-pd-nest-reduction: 2px;
+    /* border radius tokens */
+    --ts-radius-base: 6px;
+    --ts-radius-scale: 1;
+    --ts-radius: calc(var(--ts-radius-base) * var(--ts-radius-scale));
+    --ts-radius-nest-reduction: 2px;
+    --ts-radius-2xs: calc(var(--ts-radius) * 0.3);
+    --ts-radius-xs: calc(var(--ts-radius) * 0.6);
+    --ts-radius-sm: calc(var(--ts-radius) * 0.87);
+    --ts-radius-md: var(--ts-radius);
+    --ts-radius-lg: calc(var(--ts-radius) * 1.15);
+    --ts-radius-xl: calc(var(--ts-radius) * 2);
+    --ts-radius-2xl: calc(var(--ts-radius) * 1.5);
+    --ts-radius-full: 9999px;
+    /* Base/ratio math  tokens for ts-btn and buttons  */
+    --ts-btn-fw: 600;
+    --ts-btn-ls: 0.055em;
+    --ts-btn-dur: var(--ts-dur-base);
+    --ts-btn-size: calc(var(--ts-btn-base) * var(--ts-btn-scale));
+    --ts-btn-fs-ratio: 0.28;
+    --ts-btn-icon-ratio: 1.1;
+    --ts-btn-base: 42;
+    --ts-btn-scale: 1;
+    --ts-btn-h-ratio: 1;
+    --ts-btn-pad-x-ratio: 0.45;
+    --ts-btn-pad-y-ratio: 0.3;
+    --ts-btn-base-transition: background var(--ts-dur-fast) var(--ts-ease-out), border-color var(--ts-dur-fast) var(--ts-ease-out), color var(--ts-dur-fast) var(--ts-ease-out), box-shadow var(--ts-dur-fast) var(--ts-ease-out);
+    --ts-btn-border-w: 1px;
+    --ts-btn-radius: var(--ts-radius-xs);
+    /* Toolskin --ts-input type component base tokens */
+    --ts-input-fs-ratio: 0.32;
+    --ts-input-icon-ratio: 1;
+    --ts-input-h-ratio: 1;
+    --ts-input-pad-x-ratio: 0.345;
+    --ts-input-pad-y-ratio: 0.2;
+    --ts-input-gap-ratio: 0.75;
+    --ts-input-size: var(--ts-btn-h);
+    --ts-input-h: calc(var(--ts-input-size) * var(--ts-input-h-ratio));
+    --ts-input-fs: calc(var(--ts-input-h) * var(--ts-input-fs-ratio));
+    --ts-input-icon-size: calc(var(--ts-input-fs) * var(--ts-input-icon-ratio));
+    --ts-input-pad: calc(var(--ts-input-h) * 0.24);
+    --ts-input-pad-x: calc(var(--ts-input-h) * var(--ts-input-pad-x-ratio));
+    --ts-input-pad-y: calc(var(--ts-input-pad-x) * var(--ts-input-pad-y-ratio));
+    --ts-input-padding: var(--ts-input-pad-y) var(--ts-input-pad-x) var(--ts-input-pad-y) var(--ts-input-pad-left);
+    --ts-input-pad-right: calc(var(--ts-input-h) * 0.24);
+    --ts-input-pad-left: calc(var(--ts-input-h) + var(--ts-input-pad-y));
+    --ts-input-pad: var(--ts-input-pad-y) var(--ts-input-pad-x) var(--ts-input-pad-y) var(--ts-input-pad-x);
+    --ts-input-gap: calc(var(--ts-input-pad-x) * var(--ts-input-gap-ratio));
+    --ts-input-border-w: 1px;
+    --ts-input-radius: var(--ts-btn-radius);
+    /* Toolskin derived from --ts-input select component tokens */
+    --ts-select-fs-ratio: 1;
+    --ts-select-option-h-ratio: .95;
+    --ts-select-chevron-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239ea0a5' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    --ts-select-chevron: linear-gradient(45deg, transparent 50%, var(--ts-input-border-hover) 50%), linear-gradient(135deg, var(--ts-input-border-hover) 50%, transparent 50%);
+    --ts-select-chevron-pos: calc(100% - var(--ts-sp-5)) 50%, calc(100% - var(--ts-sp-4)) 50%;
+    --ts-select-chevron-size: 5px 5px;
+    --ts-select-option-h: calc(var(--ts-input-h) * var(--ts-select-option-h-ratio));
+    --ts-select-fs: calc(var(--ts-input-fs) * var(--ts-select-fs-ratio));
+    --ts-select-pad: 0 var(--ts-input-pad-x) 0 var(--ts-input-pad-x);
+    --ts-input-bg: var(--ts-this-bg-dim-2);
+    --ts-input-bg-2: var(--ts-this-bg-bright);
+    --ts-input-bg-2-t: var(--ts-this-bg-dim);
+    --ts-input-bg-active: var(--ts-this-bg-dim);
+    --ts-input-bg-hover: var(--ts-this-bg-hover);
+    --ts-input-bg-focus: var(--ts-this-bg-focus);
+    --ts-input-bg-grad: var(--ts-this-bg-grad-2);
+    --ts-input-border: var(--ts-this-bg-border);
+    --ts-input-border-hover: var(--ts-this-bg-border-hover);
+    --ts-input-border-focus: var(--ts-this-bg-focus-outline);
+    --ts-input-border-disabled: var(--ts-this-bg-border-disabled);
+    --ts-input-color: var(--ts-text-primary-dim-2);
+    --ts-input-color-hover: var(--ts-text-primary);
+    --ts-input-color-focus: var(--ts-text-accent-2);
+    --ts-input-color-active: var(--ts-text-accent);
+    --ts-input-accent: var(--ts-accent-border);
+    --ts-input-btn-color: var(--ts-input-color);
+    --ts-input-btn-bg: var(--ts-input-bg-2);
+    --ts-input-btn-bg-accent: var(--ts-accent);
+    --ts-input-btn-bg-accent-color: var(--ts-on-accent);
+    /* UI  tokens useful for  checkboxes  elements and componentds */
+    --ts-ui-control-size: 1.85rem;
+    --ts-checkbox-size: var(--ts-ui-control-size,20px);
+    --ts-ui-control-mark-inset: 18%;
+    --ts-checkbox-mark-inset: var(--ts-ui-control-mark-inset);
+    --ts-ui-control-checkbox-mark: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    --ts-ui-control-mark-size: 0.5rem;
+    --ts-ui-control-mark-color: var(--ts-accent);
+    --ts-ui-control-mark-bg: var(--ts-accent-dim);
+    --ts-sb-size: 12px;
+    --ts-sb-thumb: linear-gradient(-85deg, var(--ts-this-bg-bright), var(--ts-this-bg), var(--ts-this-bg-bright));
+    --ts-sb-thumb: var(--ts-this-bg-grad-4);
+    --ts-sb-thumb-hover: var(--ts-accent);
+    --ts-sb-border: var(--ts-this-bg-border, var(--ts-border-0));
+    --ts-sb-border-hover: color-mix(in srgb, var(--ts-accent), var(--ts-sb-border) 25%);
+    --ts-sb-border-hover: var(--ts-this-bg-border-hover, var(--ts-border-2));
+    --ts-sb-track: color-mix(in srgb, var(--ts-bg-body), transparent 90%);
+    --ts-sb-track-hover: color-mix(in srgb, var(--ts-border-0), transparent 32%);
+    --ts-sb-track: var(--ts-this-bg-grad-2);
+    --ts-sb-track-hover: var(--ts-this-bg-grad-2);
+    --ts-sb-border-w: 0px;
+    --ts-sb-border-track-w: 1px;
+    --ts-sb-border-thumb-w: 1px;
+    --ts-sb-radius: 30px;
+    --ts-btn-h: calc(var(--ts-btn-size) * var(--ts-btn-h-ratio) * 1px);
+    --ts-btn-pad-x: calc(var(--ts-btn-h) * var(--ts-btn-pad-x-ratio));
+    --ts-btn-pad-y: calc(var(--ts-btn-pad-x) * var(--ts-btn-pad-y-ratio));
+    --ts-btn-fs: calc(var(--ts-btn-h) * var(--ts-btn-fs-ratio));
+    --ts-btn-icon-size: calc(var(--ts-btn-fs) * var(--ts-btn-icon-ratio));
+    --ts-input-h: calc(var(--ts-input-size) * var(--ts-input-h-ratio));
+    --ts-input-pad-x: calc(var(--ts-input-h) * var(--ts-input-pad-x-ratio));
+    --ts-input-pad-y: calc(var(--ts-input-pad-x) * var(--ts-input-pad-y-ratio));
+    --ts-input-padding: var(--ts-input-pad-y) var(--ts-input-pad-x) var(--ts-input-pad-y) var(--ts-input-pad-left);
+    --ts-select-pad: 0 var(--ts-input-pad-x) 0 var(--ts-input-pad-x);
+    --ts-input-pad-sm: calc(var(--ts-input-h) * 0.24);
+    --ts-input-pad: var(--ts-input-pad-y) var(--ts-input-pad-x) var(--ts-input-pad-y) var(--ts-input-pad-x);
+    --ts-input-fs: calc(var(--ts-input-h) * var(--ts-input-fs-ratio));
+    --ts-select-fs: calc(var(--ts-input-fs) * var(--ts-select-fs-ratio));
+    --ts-select-option-h: calc(var(--ts-input-h) * var(--ts-select-option-h-ratio));
+    --ts-input-radius: var(--ts-radius-xs);
+    --ts-accent-dim-0: color-mix(in srgb, var(--ts-accent), transparent 60%);
+    --ts-accent-dim: color-mix(in srgb, var(--ts-accent), transparent 82%);
+    --ts-accent-dim-2: color-mix(in srgb, var(--ts-accent), transparent 92%);
+    --ts-accent-dim-3: color-mix(in srgb, var(--ts-accent), transparent 90%);
+    --ts-accent-border: color-mix(in srgb, var(--ts-accent), var(--ts-on-accent) 60%);
+    --ts-accent-border-hover: color-mix(in srgb, var(--ts-accent), var(--ts-on-accent) 40%);
+    --ts-accent-bright: color-mix(in srgb, var(--ts-accent), #ffffff 8%);
+    --ts-accent-bright-2: color-mix(in srgb, var(--ts-accent), #ffffff 18%);
+    --ts-accent-dark: color-mix(in srgb, var(--ts-accent), #000000 10%);
+    --ts-accent-dark-2: color-mix(in srgb, var(--ts-accent), #000000 25%);
+    --ts-accent-muted: color-mix(in srgb, var(--ts-accent), var(--ts-bg-body) 46%);
+    --ts-on-accent: oklch(from var(--ts-accent) clamp(0, (var(--ts-on-accent-threshold) - l) * 999, 1) 0 0);
+    --ts-on-accent-dim: color-mix(in srgb, var(--ts-on-accent), transparent 80%);
+    --ts-on-accent-dim-1: color-mix(in srgb, var(--ts-on-accent), transparent 70%);
+    --ts-on-accent-dim-2: color-mix(in srgb, var(--ts-on-accent), transparent 50%);
+    --ts-on-accent-dim-3: color-mix(in srgb, var(--ts-on-accent), transparent 40%);
+    --ts-accent-grad: linear-gradient(to top left, var(--ts-accent-bright), var(--ts-accent-dark), var(--ts-accent));
+    --ts-accent-grad-comp: linear-gradient(136deg, var(--ts-accent-bright), var(--ts-accent-dark-2), var(--ts-accent-bright-2), var(--ts-accent-dark-2));
+    --ts-accent-grad-flat: linear-gradient(90deg, var(--ts-accent-bright), var(--ts-accent-dark));
+    --ts-this-bg-grad-angle-tl: to top left;
+    --ts-this-bg-grad-angle-bl: to bottom left;
+    --ts-this-bg-grad-angle-tr: to top right;
+    --ts-this-bg-grad-angle-br: to bottom right;
+    --ts-this-bg-grad-angle: 42deg;
+    --ts-this-bg-grad-angle-1: 90deg;
+    --ts-this-bg-grad-angle-2: 114deg;
+    --ts-this-bg-grad-angle-3: 136deg;
+    --ts-this-bg-grad-angle-4: 150deg;
+    --ts-this-bg-grad-bright-pct: 6%;
+    --ts-this-bg-grad-dark-pct: 14%;
+    --ts-dim-perc-base: 0.3;
+    --ts-dim-perc-mult: 1.1;
+    --ts-dim-perc-0: var(--ts-dim-perc-base);
+    --ts-dim-perc-1: calc(var(--ts-dim-perc-0)*var(--ts-dim-perc-mult));
+    --ts-dim-perc-2: calc(var(--ts-dim-perc-1)*var(--ts-dim-perc-mult));
+    --ts-dim-perc-3: calc(var(--ts-dim-perc-2)*var(--ts-dim-perc-mult));
+    --ts-dim-perc-4: calc(var(--ts-dim-perc-3)*var(--ts-dim-perc-mult));
+    --ts-dim-perc-5: calc(var(--ts-dim-perc-4)*var(--ts-dim-perc-mult));
+    --ts-mix-perc: 12%;
+    --ts-mix-perc-hover: 18%;
+    --ts-mix-perc-active: 70%;
+    --ts-mix-perc-disabled: 8%;
+    --ts-on-surface-threshold: 0.5;
+    --ts-on-accent-threshold: 0.75;
+    --ts-this-bg: var(--ts-bg-0);
+    --ts-this-bg-dim-1: color-mix(in srgb, var(--ts-this-bg), transparent var(--ts-dim-perc-3));
+    --ts-this-bg-dim: color-mix(in srgb, var(--ts-this-bg), transparent 12%);
+    --ts-this-bg-dim-2: color-mix(in srgb, var(--ts-this-bg), transparent 25%);
+    --ts-this-bg-dim-3: color-mix(in srgb, var(--ts-this-bg), transparent 50%);
+    --ts-this-bg-dim-4: color-mix(in srgb, var(--ts-this-bg), transparent 60%);
+    --ts-this-bg-dim-5: color-mix(in srgb, var(--ts-this-bg), transparent 70%);
+    --ts-this-bg-dim-6: color-mix(in srgb, var(--ts-this-bg), transparent 80%);
+    --ts-this-bg-dim-7: color-mix(in srgb, var(--ts-this-bg), transparent 90%);
+    --ts-this-bg-bright: color-mix(in srgb, var(--ts-this-bg), #ffffff var(--ts-this-bg-grad-bright-pct, 6%));
+    --ts-this-bg-bright-1: color-mix(in srgb, var(--ts-this-bg), #ffffff 4%);
+    --ts-this-bg-bright-2: color-mix(in srgb, var(--ts-this-bg), #ffffff 8%);
+    --ts-this-bg-bright-3: color-mix(in srgb, var(--ts-this-bg), #ffffff 14%);
+    --ts-this-bg-dark: color-mix(in srgb, var(--ts-this-bg), #000000 var(--ts-this-bg-grad-dark-pct, 14%));
+    --ts-this-bg-dark-1: color-mix(in srgb, var(--ts-this-bg), #000000 2%);
+    --ts-this-bg-dark-2: color-mix(in srgb, var(--ts-this-bg), #000000 12%);
+    --ts-this-bg-muted: color-mix(in srgb, var(--ts-this-bg), var(--ts-bg-body) 46%);
+    --ts-this-bg-grad: linear-gradient(var(--ts-this-bg-grad-angle), var(--ts-this-bg), var(--ts-this-bg-dark), var(--ts-this-bg));
+    --ts-this-bg-grad-comp: linear-gradient(151deg, var(--ts-this-bg-bright), var(--ts-this-bg-dark), var(--ts-this-bg), var(--ts-this-bg-bright), var(--ts-this-bg-dark));
+    --ts-this-bg-grad-flat: linear-gradient(90deg, var(--ts-this-bg-bright), var(--ts-this-bg-dark));
+    --ts-this-bg-grad-1: linear-gradient(var(--ts-this-bg-grad-angle), var(--ts-this-bg-bright), var(--ts-this-bg-dark), var(--ts-this-bg));
+    --ts-this-bg-grad-2: linear-gradient(to top left, var(--ts-this-bg), var(--ts-this-bg-dark), var(--ts-this-bg));
+    --ts-this-bg-grad-3: linear-gradient(116deg, var(--ts-this-bg-bright), var(--ts-this-bg), var(--ts-this-bg-bright));
+    --ts-this-bg-grad-4: linear-gradient(var(--ts-this-bg-grad-angle-4), var(--ts-this-bg-focus), var(--ts-this-bg-hover), var(--ts-this-bg-dark-1), var(--ts-this-bg-focus));
+    --ts-this-bg-border: color-mix(in srgb, var(--ts-this-bg), var(--ts-text-primary) var(--ts-mix-perc));
+    --ts-this-bg-border-0: color-mix(in srgb, var(--ts-this-bg), var(--ts-text-primary) calc(var(--ts-mix-perc) * 0.5));
+    --ts-this-bg-border-hover: color-mix(in srgb, var(--ts-this-bg), var(--ts-text-primary) calc(var(--ts-mix-perc-hover)*1.5));
+    --ts-this-bg-border-active: color-mix(in srgb, var(--ts-this-bg), var(--ts-accent) var(--ts-mix-perc-active));
+    --ts-this-bg-border-focus: color-mix(in srgb, var(--ts-this-bg), var(--ts-accent) var(--ts-mix-perc-active));
+    --ts-this-bg-hover: color-mix(in srgb, var(--ts-this-bg) var(--ts-mix-perc-hover), var(--ts-text-primary) calc(var(--ts-mix-perc-hover)*.25));
+    --ts-this-bg-active: color-mix(in srgb, var(--ts-this-bg), #000000 55%);
+    --ts-this-bg-focus: color-mix(in srgb, var(--ts-this-bg-focus-outline), transparent 80%);
+    --ts-this-bg-disabled: color-mix(in srgb, var(--ts-this-bg) var(--ts-mix-perc-disabled), var(--ts-text-muted) 28%);
+    --ts-this-bg-border-disabled: color-mix(in srgb, var(--ts-this-bg) var(--ts-mix-perc-disabled), var(--ts-text-muted) 50%);
+    --ts-this-bg-hover-grad: linear-gradient(126deg, color-mix(in srgb, var(--ts-this-bg-bright), var(--ts-text-primary) 15%), color-mix(in srgb, var(--ts-this-bg-dark), var(--ts-text-primary) 8%), var(--ts-this-bg-hover));
+    --ts-this-bg-active-grad: linear-gradient(126deg, color-mix(in srgb, var(--ts-this-bg), #000000 8%), color-mix(in srgb, var(--ts-this-bg-dark), #000000 15%), var(--ts-this-bg-active));
+    --ts-this-bg-focus-outline: var(--ts-accent);
+    --ts-on-surface: oklch(from var(--ts-this-bg) clamp(0.05, (var(--ts-on-surface-threshold) - l) * 999, 0.95) 0 0);
+    --ts-on-surface-dim: color-mix(in srgb, var(--ts-on-surface), transparent 30%);
+    --ts-on-surface-muted: color-mix(in srgb, var(--ts-on-surface), oklch(0 0 0 / var(--ts-on-surface-threshold)) 95%);
+    --ts-text-primary-dim: color-mix(in srgb, var(--ts-text-primary), transparent 70%);
+    --ts-text-primary-dim-2: color-mix(in srgb, var(--ts-text-primary), transparent 40%);
+    --ts-text-secondary-dim: color-mix(in srgb, var(--ts-text-secondary), transparent 70%);
+    --ts-text-secondary-dim-2: color-mix(in srgb, var(--ts-text-secondary), transparent 40%);
+    --ts-text-muted-dim: color-mix(in srgb, var(--ts-text-muted), transparent 70%);
+    --ts-text-muted-dim-2: color-mix(in srgb, var(--ts-text-muted), transparent 40%);
+    --ts-text-invert-dim: color-mix(in srgb, var(--ts-text-invert), transparent 70%);
+    --ts-text-invert-dim-2: color-mix(in srgb, var(--ts-text-invert), transparent 40%);
+    --ts-text-accent: color-mix(in srgb, var(--ts-accent), var(--ts-text-primary) 20%);
+    --ts-text-accent-2: color-mix(in srgb, var(--ts-accent), var(--ts-text-primary) 40%);
+    --ts-text-accent-3: color-mix(in srgb, var(--ts-accent), var(--ts-text-primary) 60%);
+    --ts-text-accent-dim: color-mix(in srgb, var(--ts-text-accent), transparent 70%);
+    --ts-text-accent-dim-2: color-mix(in srgb, var(--ts-text-accent), transparent 40%);
+    --ts-this-color-bright: color-mix(in srgb, var(--ts-text-accent), var(--ts-on-accent) 12%);
+    --ts-this-color-dim: alpha(from currentcolor / 0.78);
+    --ts-this-color-dim-2: alpha(from currentcolor / 0.65);
+    --ts-this-color-dim-3: alpha(from currentcolor / 0.45);
+    --ts-this-color-dim-4: alpha(from currentcolor / 0.25);
+    --ts-this-color-dim-5: alpha(from currentcolor / 0.15);
+    --ts-input-bg: var(--ts-this-bg-dim-2);
+    --ts-input-bg-hover: var(--ts-this-bg-hover);
+    --ts-input-bg-focus: var(--ts-this-bg-focus);
+    --ts-input-border: var(--ts-this-bg-border);
+    --ts-mix-perc: 18%;
+    --ts-this-bg-border: color-mix(in srgb, var(--ts-this-bg), var(--ts-text-primary) var(--ts-mix-perc));
+    --ts-input-border-hover: var(--ts-this-bg-border-hover);
+    --ts-input-border-focus: var(--ts-this-bg-focus-outline);
+    --ts-input-border-active: var(--ts-input-border-focus);
+    --ts-input-bg-disabled: var(--ts-this-bg-disabled);
+    --ts-input-border-disabled: var(--ts-this-bg-border-disabled);
+    --ts-input-color-disabled: color-mix(in srgb, currentColor, transparent 50%);
+    --ts-input-color: color-mix(in srgb, var(--ts-text-primary), transparent 52%);
+    --ts-input-color-dim: color-mix(in srgb, var(--ts-input-color), transparent 60%);
+    --ts-input-color-focus: var(--ts-text-primary);
+    --ts-btn-fw: 600;
+    --ts-btn-ls: 0.05em;
+    --ts-btn-pad-x: calc(var(--ts-btn-h) * var(--ts-btn-pad-x-ratio));
+    --ts-btn-pad-y: calc(var(--ts-btn-pad-x) * var(--ts-btn-pad-y-ratio));
+    --ts-btn-accent: var(--ts-accent);
+    --ts-btn-border: var(--ts-this-bg-border);
+    --ts-btn-border-hover: var(--ts-this-bg-border-hover);
+    --ts-btn-border-focus: var(--ts-this-bg-border-focus);
+    --ts-btn-border-active: var(--ts-this-bg-border-active);
+    --ts-btn-color: var(--ts-text-primary);
+    --ts-btn-color-hover: var(--ts-on-accent);
+    --ts-btn-bg-hover: color-mix(in srgb, var(--ts-this-bg), var(--ts-accent) 90%) !important;
+    --ts-btn-bg: var(--ts-this-bg);
+    --ts-input-pad-y: calc(var(--ts-input-pad-x)*.7);
+    --ts-input-size: var(--ts-btn-h);
+    --ts-input-pad: calc(var(--ts-input-h) * 0.24);
+    --ts-input-pad-left: calc(var(--ts-input-h) + var(--ts-input-pad-y));
+    --ts-option-bg: color-mix(in srgb, var(--ts-this-bg), transparent 90%);
+    --ts-option-bg-hover: var(--ts-input-bg-hover);
+    --ts-option-bg-active: var(--ts-accent-dark-2);
+    --ts-option-bg-focus: var(--ts-input-bg-focus);
+    --ts-select-dropdown-bg: color-mix(in srgb, var(--ts-this-bg), black 90%);
+    --ts-select-dropdown-bg-dim: alpha(from var(--ts-select-dropdown-bg) / 0.82);
+    --ts-select-dropdown-bg-hover: color-mix(in srgb, var(--ts-select-dropdown-bg), var(--ts-input-color-dim) 70%);
+    --ts-icon-svg-gear: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' aria-hidden='true'%3E%3Cpath d='M195.1 9.5C198.1-5.3 211.2-16 226.4-16l59.8 0c15.2 0 28.3 10.7 31.3 25.5L332 79.5c14.1 6 27.3 13.7 39.3 22.8l67.8-22.5c14.4-4.8 30.2 1.2 37.8 14.4l29.9 51.8c7.6 13.2 4.9 29.8-6.5 39.9L447 233.3c.9 7.4 1.3 15 1.3 22.7s-.5 15.3-1.3 22.7l53.4 47.5c11.4 10.1 14 26.8 6.5 39.9l-29.9 51.8c-7.6 13.1-23.4 19.2-37.8 14.4l-67.8-22.5c-12.1 9.1-25.3 16.7-39.3 22.8l-14.4 69.9c-3.1 14.9-16.2 25.5-31.3 25.5l-59.8 0c-15.2 0-28.3-10.7-31.3-25.5l-14.4-69.9c-14.1-6-27.2-13.7-39.3-22.8L73.5 432.3c-14.4 4.8-30.2-1.2-37.8-14.4L5.8 366.1c-7.6-13.2-4.9-29.8 6.5-39.9l53.4-47.5c-.9-7.4-1.3-15-1.3-22.7s.5-15.3 1.3-22.7L12.3 185.8c-11.4-10.1-14-26.8-6.5-39.9L35.7 94.1c7.6-13.2 23.4-19.2 37.8-14.4l67.8 22.5c12.1-9.1 25.3-16.7 39.3-22.8L195.1 9.5zM256.3 336a80 80 0 1 0 -.6-160 80 80 0 1 0 .6 160z'/%3E%3C/svg%3E");
+    --ts-icon-svg-xmark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M5 5l14 14M19 5 5 19' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+/* -----------------------------------------------------
+   -- NATIVE HTML SELECT MAIN & STATE RULES --
+   ----------------------------------------------------- */
+#app,
+.app-shell {
+    --ts-this-bg: var(--ts-bg-body);
+    /* Main Chained Base Rule */
+    .ts-card, 
+    .ts-ui-accordion {
+        --ts-this-bg: var(--ts-bg-0);
+
+        & select.ts-ui-select, 
+        & .ts-ui-select, 
+        & select {
+            padding: var(--ts-select-pad)!important;
+            min-height: var(--ts-input-h) !important;
+            line-height: 1lh !important;
+            cursor: pointer !important;
+            appearance: base-select !important;
+            background: var(--ts-input-bg) !important;
+            border: 1px solid var(--ts-input-border) !important;
+            background-image: none !important;
+            gap: 1em;
+            display: flex;
+            align-items: center;
+            color: var(--ts-input-color);
+            --ts-this-bg: var(--ts-bg-1-t);
+            
+            &:hover {
+              --ts-input-bg: var(--ts-input-bg-hover); 
+            }
+
+            &:active, &:focus, &:open {
+              --ts-input-bg: var(--ts-input-bg-active); 
+            }
+
+
+            /* -- PICKER ICON (Chevron Arrow) -- */
+            &::picker-icon {
+                /*content: var(--ts-select-chevron-svg);*/
+                transform: rotate(-90deg) !important;
+                font-family: "Font Awesome 5 Regular";
+                --ts-input-icon-ratio: 1.15;
+                /*content: "\f061" !important;*/
+                content: var(--ts-select-chevron-svg)!important;
+                transform-origin: center center;
+                min-height: var(--ts-input-h, 40px) !important;
+                min-height: var(--ts-input-icon-size) !important;
+                display: inline-flex;
+                align-items: center;
+                font-size: var(--ts-input-icon-size) !important;
+                transition: transform 0.2s ease-in-out !important;
+            }
+
+            /* Chevron rotation adjustments on open state */
+            &:open::picker-icon {
+                transform: rotate(0deg) !important;
+                --ts-input-color: var(--ts-text-accent);
+            }
+            /* Opt-in to customizable rendering engine */
+           
+
+            /* -- PICKER CONTAINER (Dropdown Popover) -- */
+            & ::picker(select) {
+                appearance: base-select !important;
+                font-size: var(--ts-select-fs) !important;
+                flex-direction: column !important;
+                gap: 0px !important;
+                padding: 0px !important;
+                background: var(--ts-select-dropdown-bg-dim, var(--ts-select-dropdown-bg)) !important;
+                border: 1px solid var(--ts-input-border) !important;
+                border-radius: var(--ts-input-radius) !important;
+                overflow-y: auto;
+                overflow-x: hidden;
+                scrollbar-gutter: unset;
+                scrollbar-width: thin;
+                scrollbar-color: var(--ts-border-1) transparent;
+                backdrop-filter: blur(5px);
+                --ts-this-bg: var(--ts-bg-body);
+                box-sizing: border-box !important;
+                flex-direction: column !important;
+                flex-wrap: wrap !important;
+                align-items: center !important;
+                display: none;
+            }
+
+            &:open ::picker(select) {
+                display: flex;
+            }
+
+            /* -- DROPDOWN OPTIONS & INNER CHECKMARK -- */
+            & option {
+                display: flex !important;
+                align-items: center;
+                line-height: var(--ts-select-option-h);
+                min-height: var(--ts-select-option-h);
+                height: var(--ts-select-option-h);
+                max-height: var(--ts-select-option-h);
+                padding: 0 var(--ts-input-pad-x) !important;
+                cursor: pointer !important;
+                border-radius: 0 !important;
+                --ts-text-color-base: var(--ts-input-color);
+                color: var(--ts-input-color) !important;
+                border-bottom: 1px solid var(--ts-border-1)!important;
+                background: var(--ts-option-bg) !important;
+                box-sizing: border-box;
+                font-size: inherit;
+                border-inline: 0px solid; border-inline-color: var(--ts-border-0) !important; flex: 1 1 auto;
+                gap: 0;
+                --ts-option-bg: transparent;
+                --ts-this-bg: inherit;
+                /* Cleans up the double-border artifact on the very last list element */
+                &:last-child {
+                    border-bottom: none !important;
+                }
+
+                /* Option Interaction Swaps */
+                &:hover, &:focus {
+                    --ts-option-bg: var(--ts-option-bg-hover);
+                    --ts-input-color: var(--ts-text-accent) !important;
+                    color: var(--ts-input-color) !important;
+                }
+
+                &:checked, &:active {
+                    --ts-option-bg: var(--ts-accent) !important;
+                    --ts-this-bg: var(--ts-accent) !important;
+                    color: var(--ts-input-color) !important;
+                    --ts-input-color: var(--ts-on-accent) !important;
+                }
+                /* Active Selection Option Indicator (The Checkmark) */
+                &::checkmark {
+                    color: inherit !important;
+                    margin-right: var(--ts-sp-2) !important;
+                    visibility: visible;
+                }
+                &:not(:checked)::checkmark {
+                    color: inherit !important;
+                    visibility: visible;
+                    content: "X";
+                }   
+                &:checked, &:active {
+                    --ts-option-bg: var(--ts-accent) !important;
+                    --ts-this-bg: var(--ts-accent) !important;
+                    color: var(--ts-input-color) !important;
+                    --ts-input-color: var(--ts-on-accent) !important;
+                }
+            }
+        }
+    }
+}
+
+/* -----------------------------------------------------
+   -- MODERN APPEARANCE: BASE-SELECT STYLING LAYER --
+   ----------------------------------------------------- */
+/* Opt-in to customizable rendering engine */
+& select.ts-ui-select, & ::picker(select) {
+    appearance: base-select !important;
+    font-size: var(--ts-select-fs) !important;
+}
+
+/* -- PICKER ICON (Chevron Arrow) -- */
+& select.ts-ui-select::picker-icon {
+    /*content: var(--ts-select-chevron-svg);*/
+    transform: rotate(0deg) !important;
+    transform-origin: center center;
+    min-height: var(--ts-input-h, 40px) !important;
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--ts-input-icon-size) !important;
+    transition: transform 0.2s ease-in-out !important;
+}
+
+/* Chevron rotation adjustments on open state */
+& select.ts-ui-select:open::picker-icon {
+    transform: rotate(90deg) !important;
+}
+
+/* -- PICKER CONTAINER (Dropdown Popover) -- */
+& ::picker(select) {
+    flex-direction: column !important;
+    gap: 0px !important;
+    padding: 0px !important;
+    background: var(--ts-select-dropdown-bg-dim, var(--ts-select-dropdown-bg)) !important;
+    border: 1px solid var(--ts-input-border) !important;
+    border-radius: var(--ts-input-radius) !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-gutter: unset;
+    scrollbar-width: thin;
+    scrollbar-color: var(--ts-border-1) transparent;
+    backdrop-filter: blur(5px);
+    --ts-this-bg: var(--ts-bg-body);
+    box-sizing: border-box !important;
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+}
+
+& select.ts-ui-select:open ::picker(select) {
+    display: flex;
+}
+
+/* -- DROPDOWN OPTIONS & INNER CHECKMARK -- */
+& select.ts-ui-select option {
+    display: flex !important;
+    align-items: center !important;
+    line-height: var(--ts-select-option-h);
+    min-height: var(--ts-select-option-h);
+    height: var(--ts-select-option-h);
+    max-height: var(--ts-select-option-h);
+    padding: 0 var(--ts-input-pad-x) !important;
+    cursor: pointer !important;
+    border-radius: 0 !important;
+    --ts-text-color-base: var(--ts-input-color);
+    color: var(--ts-input-color) !important;
+    border-bottom: 1px solid var(--ts-border-1)!important;
+    background: var(--ts-option-bg) !important;
+    box-sizing: border-box;
+    font-size: inherit;
+    border-inline: 1px solid; 
+    border-inline-color: var(--ts-border-0) !important; flex: 1 1 auto;
+    gap: 0;
+    --ts-option-bg: transparent;
+    --ts-this-bg: inherit;
+    /* Cleans up the double-border artifact on the very last list element */
+    &:last-child {
+        border-bottom: none !important;
+    }
+
+    /* Option Interaction Swaps */
+    &:hover, &:focus {
+        --ts-option-bg: var(--ts-option-bg-hover);
+        --ts-input-color: var(--ts-text-accent) !important;
+        color: var(--ts-input-color) !important;
+    }
+
+}
+.brand-mark {
+   
+    border: 1px solid var(--ts-border-2);
+
+    background: var(--ts-accent-dim-3);
+    border-radius: var(--ts-btn-radius);
+}
+
+.heading p {
+
+    display: none;
+}
+:where(.app-shell) .app-header {
+    --ts-this-pad-x: var(--ts-sp-2);
+    --ts-this-pad-y: calc(var(--ts-sp-unit) * 1.25);
+    --ts-this-gap: calc(var(--ts-sp-unit) * 1.75);
+    min-height: calc(var(--ts-sp-unit) * 15);
+    padding: var(--ts-this-pad-y) var(--ts-this-pad-x);
+    gap: var(--ts-this-gap);
+}
+
+.ts-icon:is([class*="ts-icon__svg-"]),
+.ts-icon[class*="__svg-"] {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  color: inherit;
+  font-size: var(--ts-input-icon-size, 1.2rem);
+  position: relative;
+
+  /* Redefinimos la variable según el tipo de icono en el elemento principal */
+  &[class*="gear"] {
+    --ts-this-icon-svg: var(--ts-icon-svg-gear);
+  }
+  &[class*="xmark"] {
+    --ts-this-icon-svg: var(--ts-icon-svg-xmark);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: currentColor; /* El color se asigna directo aquí */
+
+    -webkit-mask-image: var(--ts-this-icon-svg);
+    mask-image: var(--ts-this-icon-svg);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+}
